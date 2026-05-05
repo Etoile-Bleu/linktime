@@ -1,3 +1,18 @@
+mod hash;
+// mod map;
+pub mod map;
+mod ref_impl;
+pub mod referenced_slice;
+pub mod slice;
+pub mod sorted_referenced_slice;
+pub mod sorted_slice;
+
+pub use map::ScatteredMap;
+pub use referenced_slice::ScatteredReferencedSlice;
+pub use slice::ScatteredSlice;
+pub use sorted_referenced_slice::ScatteredSortedReferencedSlice;
+pub use sorted_slice::ScatteredSortedSlice;
+
 #[doc(hidden)]
 #[macro_export]
 macro_rules! __scatter_parse {
